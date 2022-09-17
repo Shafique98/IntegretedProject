@@ -1,9 +1,15 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.velociter.ems.helper.Operation"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
 if (session.getAttribute("empId") == null) {
 	response.sendRedirect("Login.jsp");
 } else {
+%>
+<%
+Operation op = new Operation();
+ArrayList<String> list = op.getCountries();
 %>
 <!DOCTYPE html>
 <html>
@@ -58,7 +64,17 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 			<tr>
 				<td>Customer CountryName:</td>
-				<td><input type="text" name="CountryName" required="required"></td>
+				<td><select name="CountryName" required>
+						<option value="">Select Country</option>
+						<%
+						for (String showCountry : list) {
+						%>
+						<option value="<%=showCountry%>"><%=showCountry%></option>
+						<%
+						}
+						%>
+				</select></td>
+				
 			</tr>
 			<tr>
 				<td>Customer Pincode:</td>

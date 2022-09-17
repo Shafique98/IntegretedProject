@@ -17,37 +17,20 @@
 		<property name="hbm2ddl.auto">update</property>
 		<property name="show_sql">true</property>
 
-		<mapping
-			class="com.velociter.hibernate.component.training.TrainingCenter" />
+		<mapping class="com.velociter.hibernate.component.training.TrainingCenter" />
 		<mapping class="com.velociter.hibernate.component.order.Order" />
-		<mapping
-			class="com.velociter.hibernate.component.songdetail.Song" />
-		<mapping
-			class="com.velociter.hibernate.component.animal.Animal" />
-		<mapping
-			class="com.velociter.hibernate.component.foodfactory.FoodFactory" />
-
-		<mapping
-			class="com.velociter.hibernate.componentmapping.customer.Customer"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.flightbooking.Flight"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.onlinemarriage.MarriageRegistration"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.onlineshopping.Shopping"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.socialmedia.SocialMedia"></mapping>
-
-		<mapping
-			class="com.velociter.hibernate.componentmapping.recharge.MobileRecharge" />
-		<mapping
-			class="com.velociter.hibernate.componentmapping.dress.Dress" />
-		<mapping
-			class="com.velociter.hibernate.componentmapping.electronic.ElectronicProduct"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.movie.MovieTicket"></mapping>
-		<mapping
-			class="com.velociter.hibernate.componentmapping.student.Student"></mapping>
-
+		<mapping class="com.velociter.hibernate.component.songdetail.Song" />
+		<mapping class="com.velociter.hibernate.component.animal.Animal" />
+		<mapping class="com.velociter.hibernate.component.foodfactory.FoodFactory" />
+		<mapping class="com.velociter.hibernate.componentmapping.customer.Customer"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.flightbooking.Flight"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.onlinemarriage.MarriageRegistration"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.onlineshopping.Shopping"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.socialmedia.SocialMedia"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.recharge.MobileRecharge" />
+		<mapping class="com.velociter.hibernate.componentmapping.dress.Dress" />
+		<mapping class="com.velociter.hibernate.componentmapping.electronic.ElectronicProduct"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.movie.MovieTicket"></mapping>
+		<mapping class="com.velociter.hibernate.componentmapping.student.Student"></mapping>
 	</session-factory>
 </hibernate-configuration>
