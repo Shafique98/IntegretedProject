@@ -1,6 +1,11 @@
 <%@page import="com.velociter.ems.helper.Operation"%>
 <%@page import="java.util.ArrayList"%>
 
+<%
+if (session.getAttribute("empId") == null) {
+	response.sendRedirect("Login.jsp");
+} else {
+%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%
@@ -12,7 +17,7 @@ ArrayList<String> list = op.getCountries();
 <head>
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="../Resources/vlogo.ico">
-<title>Flight Booking</title>
+<title>Customer Registration</title>
 <link rel="stylesheet" href="../Style.css">
 </head>
 <body>
@@ -44,16 +49,16 @@ ArrayList<String> list = op.getCountries();
 			</tr>
 			<tr>
 				<td>House No :</td>
-				<td><input type="text" name="houseNo" required></td>
+				<td><input type="text" oninput="value=value.replace(/[^a-zA-Z0-9 -]/g,'')" name="houseNo" required></td>
 			</tr>
 			<tr>
 			<tr>
 				<td>Street Name :</td>
-				<td><input type="text" name="streetName" required></td>
+				<td><input type="text" oninput="value=value.replace(/[^a-zA-Z0-9 -]/g,'')" name="streetName" required></td>
 			</tr>
 			<tr>
 				<td>Area Name :</td>
-				<td><input type="text" name="areaName" required></td>
+				<td><input type="text" oninput="value=value.replace(/[^a-zA-Z0-9 -]/g,'')" name="areaName" required></td>
 			</tr>
 			<tr>
 				<td>City :</td>
@@ -87,5 +92,9 @@ ArrayList<String> list = op.getCountries();
 
 		</table>
 	</form>
+	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
+<%
+}
+%>

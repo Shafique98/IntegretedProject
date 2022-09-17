@@ -1,5 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%
+if (session.getAttribute("empId") == null) {
+	response.sendRedirect("Login.jsp");
+} else {
+%>
+	
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,5 +42,9 @@
 					value="clear"></td>
 		</table>
 	</form>
+	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
+<% 
+}
+%>

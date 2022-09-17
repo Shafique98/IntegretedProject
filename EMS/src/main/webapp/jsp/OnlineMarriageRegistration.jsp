@@ -1,5 +1,10 @@
 <%@page import="com.velociter.ems.helper.Operation"%>
 <%@page import="java.util.ArrayList"%>
+<%
+if (session.getAttribute("empId") == null) {
+	response.sendRedirect("Login.jsp");
+} else {
+%>
 
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -106,8 +111,8 @@ ArrayList<String> list = op.getCountries();
 			</tr>
 
 			<tr>
-				<td>Height :</td>
-				<td><input type="text" name="height" required></td>
+				<td>Height In Feet :</td>
+				<td><input type="text" oninput="this.value=this.value.replace(/[^0-9 .]/g,'')" name="height" required></td>
 			</tr>
 
 
@@ -165,6 +170,9 @@ ArrayList<String> list = op.getCountries();
 				value="clear"></td>
 		</table>
 	</form>
-
+   <a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
+<% 
+}
+%>
