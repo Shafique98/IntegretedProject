@@ -4,7 +4,6 @@
 if (session.getAttribute("empId") == null) {
 	response.sendRedirect("Login.jsp");
 } else {
-	String first = (String) session.getAttribute("firstname");
 %>
 <!DOCTYPE html>
 <html>
@@ -19,25 +18,33 @@ if (session.getAttribute("empId") == null) {
 		<table align="center">
 			<tr>
 				<td>Animal Name:</td>
-				<td><input type="text" name="AnimalName" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^a-zA-Z ]/g,'')" name="AnimalName"
+					required="required"></td>
 			</tr>
 			<tr>
 				<td>Animal Type:</td>
-				<td><input type="radio" value="Domestic" name="AnimalType"
+				<td><input type="radio" value="Domestic" name="AnimalType" checked="checked"
 					required="required">Domestic <input type="radio"
 					value="Wild" name="AnimalType">Wild</td>
 			</tr>
 			<tr>
 				<td>Animal Breed:</td>
-				<td><input type="text" name="AnimalBreed" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^a-zA-Z ]/g,'')" name="AnimalBreed"
+					required="required"></td>
 			</tr>
 			<tr>
 				<td>Animal Weight:</td>
-				<td><input type="text" name="AnimalWeight" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^0-9 ]/g,'')" name="AnimalWeight"
+					oninput="" required="required"></td><td>Kgs</td>
 			</tr>
 			<tr>
 				<td>Animal Height:</td>
-				<td><input type="text" name="AnimalHeight" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^0-9 ]/g,'')" name="AnimalHeight"
+					required="required"></td><td>Feet</td>
 			</tr>
 			<tr>
 				<td>Animal Leg Count:</td>
@@ -55,15 +62,22 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 			<tr>
 				<td>Animal Food:</td>
-				<td><input type="text" name="AnimalFood" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^a-zA-Z ]/g,'')" name="AnimalFood"
+					required="required"></td>
 			</tr>
 			<tr>
 				<td>Animal Diet:</td>
-				<td><input type="text" name="AnimalDiet" required="required"></td>
+				<td><select name="AnimalDiet" required="required">
+						<option value="Vegetarian">Vegetarian</option>
+						<option value="Non Vegetarian">Non-Vegetarian</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td>Animal LifeSpan:</td>
-				<td><input type="text" name="AnimalLife" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^0-9 ]/g,'')" name="AnimalLife"
+					required="required"></td><td>Months</td>
 			</tr>
 			<tr>
 				<td>Animal Place:</td>
@@ -81,10 +95,9 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 		</table>
 	</form>
+	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
-
-
 <%
 }
 %>

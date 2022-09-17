@@ -231,7 +231,6 @@ if (session.getAttribute("empId") == null) {
 	
 	<%}%>
 	</script>
-	</script>
 	<%
 	if (session.getAttribute("reportingto") == null) {
 	%>
@@ -240,7 +239,7 @@ if (session.getAttribute("empId") == null) {
 	}
 	%>
 	<script type="text/javascript" src="../Panel.js"></script>
-	<table style="width: 100%; text-align: center;">
+	<table style="width: 100%; text-align: center;background-color: gray;">
 		<tr>
 			<td><a href="OnlineShopping.jsp">Online Shopping</a></td>
 			<td><a href="SocialMedia.jsp">Social Media</a></td>

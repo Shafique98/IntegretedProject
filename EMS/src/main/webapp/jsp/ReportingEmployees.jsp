@@ -1,8 +1,11 @@
-
 <%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	
+<%
+if (session.getAttribute("empId") == null) {
+	response.sendRedirect("Login.jsp");
+} else {
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,28 +26,16 @@
 		ArrayList<String> empidList = (ArrayList<String>) session.getAttribute("empids");
 		ArrayList<String> mobilenumberList = (ArrayList<String>) session.getAttribute("mobile_nos");
 		%>
-
-
 	</table>
-	<table border=2 style="width: 100%;">
+	<table border="2" style="width: 100%;">
 		<tr
 			style="background-color: #ff8040; height: 50px; text-align: center; color: black">
-
 			<td>EmployeeId</td>
-
 			<td>First Name</td>
-
 			<td>Last Name</td>
-
 			<td>Email</td>
-
 			<td>Mobile Number</td>
-
 			<td>Designation</td>
-
-
-
-
 		</tr>
 		<%
 		if (firstnameList != null) {
@@ -67,3 +58,6 @@
 	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
+<%
+}
+%>

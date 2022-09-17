@@ -4,7 +4,6 @@
 if (session.getAttribute("empId") == null) {
 	response.sendRedirect("Login.jsp");
 } else {
-	String first = (String) session.getAttribute("firstname");
 %>
 <!DOCTYPE html>
 <html>
@@ -33,11 +32,13 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 			<tr>
 				<td>Item Quantity:</td>
-				<td><input type="text" name="ItemQty" required="required"></td>
+				<td><input type="number" name="ItemQty" required="required"></td>
 			</tr>
 			<tr>
 				<td>Customer Name:</td>
-				<td><input type="text" name="CustomerName" required="required"></td>
+				<td><input type="text"
+					oninput="value=value.replace(/[^a-zA-Z ]/g,'')" name="CustomerName"
+					required="required"></td>
 			</tr>
 			<tr>
 				<td>Customer StreetName:</td>
@@ -72,6 +73,7 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 		</table>
 	</form>
+	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
 <%
