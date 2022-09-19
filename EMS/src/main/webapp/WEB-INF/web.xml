@@ -198,7 +198,7 @@
 
 	<servlet>
 		<servlet-name>MobileRechargeServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.MobileRechargeServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shwetaservlets.MobileRechargeServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MobileRechargeServlet</servlet-name>
@@ -206,7 +206,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>DressServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.DressServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shwetaservlets.DressServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>DressServlet</servlet-name>
@@ -214,7 +214,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>ElectronicServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.ElectronicServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shwetaservlets.ElectronicServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ElectronicServlet</servlet-name>
@@ -222,7 +222,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>MovieTicketServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.MovieTicketServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shwetaservlets.MovieTicketServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MovieTicketServlet</servlet-name>
@@ -230,7 +230,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>StudentServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.StudentServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shwetaservlets.StudentServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>StudentServlet</servlet-name>

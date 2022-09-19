@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.shwetaservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -66,6 +66,7 @@ public class MovieTicketServlet extends HttpServlet {
 			Transaction tc = session.beginTransaction();
 			tc.commit();
 			
+			pw.print("Ticket booking successfully");
 			RequestDispatcher rq = request.getRequestDispatcher("Welcome.jsp");
 			rq.include(request, response);
 			

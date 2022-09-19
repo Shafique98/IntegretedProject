@@ -24,9 +24,9 @@ if (session.getAttribute("empId") == null) {
 			<tr>
 				<td>Category</td>
 				<td><select name="category">
-				<option value="Mens">Mens</option>
-				<option value="Womens">Womens</option>
-				<option value="Childrens">Childrens</option>
+				<option value="Men">Men</option>
+				<option value="Women">Women</option>
+				<option value="Kids">Kids</option>
 			
 				</select></td>
 			</tr>

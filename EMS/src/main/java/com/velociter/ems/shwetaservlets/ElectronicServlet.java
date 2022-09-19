@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.shwetaservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -64,7 +64,8 @@ public class ElectronicServlet extends HttpServlet {
 
 			Transaction tx = session.beginTransaction();
 			tx.commit();
-
+			
+			pw.print("Product details successfully inserted");
 			RequestDispatcher rd = request.getRequestDispatcher("Welcome.jsp");
 			rd.include(request, response);
 

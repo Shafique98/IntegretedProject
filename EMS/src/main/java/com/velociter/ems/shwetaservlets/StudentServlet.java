@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.shwetaservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -81,7 +81,8 @@ public class StudentServlet extends HttpServlet {
 
 			Transaction tx = session.beginTransaction();
 			tx.commit();
-
+			
+			pw.print("Student details inserted successfully");
 			RequestDispatcher rq = request.getRequestDispatcher("Welcome.jsp");
 			rq.include(request, response);
 

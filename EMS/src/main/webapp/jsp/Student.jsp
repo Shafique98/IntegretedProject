@@ -110,9 +110,13 @@ if (session.getAttribute("empId") == null) {
 			</tr>
 			<tr>
 				<td>Grade</td>
-				<td><input type="text"
-					oninput="value=value.replace(/[^a-zA-Z ]/g,'')" name="grade"
-					required></td>
+				<td><select name="grade">
+						<option value="A">A</option>
+						<option value="B">B</option>
+						<option value="C">C</option>
+						<option value="D">D</option>
+						<option value="E">E</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td><input type="submit" value="Submit" required> <input

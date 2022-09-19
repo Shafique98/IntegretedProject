@@ -42,6 +42,7 @@ if (session.getAttribute("empId") == null) {
 				<option value="3Years">3 Years</option>
 				<option value="5Years">5 Years</option>
 				<option value="10Years">10 Years</option>
+				<option value="NoWarranty">No Warranty</option>
 				</select></td>
 			</tr>
 			<tr>

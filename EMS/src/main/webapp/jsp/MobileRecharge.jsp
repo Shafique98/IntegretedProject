@@ -34,7 +34,6 @@ if (session.getAttribute("empId") == null) {
 				<td>Operator Name</td>
 				<td><select name="operatorName">
 						<option value="Airtel">Airtel</option>
-						<option value="Idea">Idea</option>
 						<option value="BSNL">BSNL</option>
 						<option value="Vi">Vi</option>
 						<option value="Jio">Jio</option>
@@ -57,7 +56,7 @@ if (session.getAttribute("empId") == null) {
 				</select></td>
 			</tr>
 			<tr>
-				<td>Balance</td>
+				<td>Amount</td>
 				<td><input type="text" name="balance"
 					oninput="this.value=this.value.replace(/[^0-9.]/g,'')"
 					 pattern="[0-9]{1-5}" required></td>

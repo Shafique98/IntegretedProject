@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.shwetaservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,6 +62,7 @@ public class MobileRechargeServlet extends HttpServlet {
 			Transaction tx = session.beginTransaction();
 			tx.commit();
 			
+			out.print("Mobile details inserted successfully");
 			RequestDispatcher rq=request.getRequestDispatcher("Welcome.jsp");
 			rq.include(request, response);
 			
