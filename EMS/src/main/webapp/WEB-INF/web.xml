@@ -108,7 +108,7 @@
 
 	<servlet>
 		<servlet-name>OnlineShopping</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.OnlineShoppingServlet</servlet-class>
+		<servlet-class>com.velociter.ems.danishservlets.OnlineShoppingServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>OnlineShopping</servlet-name>
@@ -117,7 +117,7 @@
 
 	<servlet>
 		<servlet-name>SocialMediaServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.SocialMediaServlet</servlet-class>
+		<servlet-class>com.velociter.ems.danishservlets.SocialMediaServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SocialMediaServlet</servlet-name>
@@ -126,7 +126,7 @@
 
 	<servlet>
 		<servlet-name>MarriageRegistrationServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.MarriageRegistrationServlet</servlet-class>
+		<servlet-class>com.velociter.ems.danishservlets.MarriageRegistrationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>MarriageRegistrationServlet</servlet-name>
@@ -135,7 +135,7 @@
 
 	<servlet>
 		<servlet-name>flightBookingServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.flightBookingServlet</servlet-class>
+		<servlet-class>com.velociter.ems.danishservlets.flightBookingServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>flightBookingServlet</servlet-name>
@@ -144,12 +144,14 @@
 
 	<servlet>
 		<servlet-name>CustomerRegistrationServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.CustomerRegistrationServlet</servlet-class>
+		<servlet-class>com.velociter.ems.danishservlets.CustomerRegistrationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>CustomerRegistrationServlet</servlet-name>
 		<url-pattern>/jsp/CustomerRegistrationServlet</url-pattern>
 	</servlet-mapping>
+
+
 
 	<servlet>
 		<servlet-name>SongServlet</servlet-name>

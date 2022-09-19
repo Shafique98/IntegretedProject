@@ -112,7 +112,9 @@ ArrayList<String> list = op.getCountries();
 
 			<tr>
 				<td>Height In Feet :</td>
-				<td><input type="text" oninput="this.value=this.value.replace(/[^0-9 .]/g,'')" name="height" required></td>
+				<td><input type="text"
+					oninput="this.value=this.value.replace(/[^0-9 .]/g,'')"
+					name="height" required></td>
 			</tr>
 
 
@@ -125,7 +127,23 @@ ArrayList<String> list = op.getCountries();
 			<tr>
 			<tr>
 				<td>Qualification :</td>
-				<td><input type="text" name="qualification" required></td>
+				<!--<td><input type="text" name="qualification" oninput="value=value.replace(/[^a-zA-Z ]/g,'')" required></td>   -->
+				<td><select name="qualification">
+						<option value="BA">BA</option>
+						<option value="B.Sc">B.Sc</option>
+						<option value="B.com">B.com</option>
+						<option value="BCA">BCA</option>
+						<option value="BE">BE</option>
+						<option value="B.Tech">B.Tech</option>
+						<option value="BBA">BBA</option>
+						<option value="ME">ME</option>
+						<option value="M.Tech">M.Tech</option>
+						<option value="MBA">MBA</option>
+						<option value="MA">MA</option>
+						<option value="M.Sc">M.Sc</option>
+						<option value="M.com">M.com</option>
+						<option value="MCA">MCA</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td>House No :</td>
@@ -162,17 +180,18 @@ ArrayList<String> list = op.getCountries();
 			<tr>
 				<td>PinCode :</td>
 				<td><input type="text"
-					oninput="this.value=this.value.replace(/[^1-9]/g,'').replace(/(\..*)\./g,'$1')"
-					name="pinCode" minlength="6" maxlength="6" required></td>
+					oninput="this.value=this.value.replace(/[^0-9]/g,'')"
+					name="pinCode" minlength="6" maxlength="6" required>
+				</td>
 			</tr>
 			<td colspan=2 align=center><input type="submit"
 				name="submitButton" value="Register"> <input type="reset"
 				value="clear"></td>
 		</table>
 	</form>
-   <a href="Welcome.jsp">Welcome page</a>
+	<a href="Welcome.jsp">Welcome page</a>
 </body>
 </html>
-<% 
+<%
 }
 %>

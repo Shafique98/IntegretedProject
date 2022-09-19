@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.danishservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -95,16 +95,19 @@ public class SocialMediaServlet extends HttpServlet {
 			if(socialObj.getPassword().equals( socialObj.getConfirmPassword())) {
 				
 				session.save(socialObj); // Save the contact object in hibernate session
+				writter.print("SocialMedia Details inserted successfully");
 			}
 			
 			else {
-				System.out.println("password is incorrect");
+				writter.print("password is incorrect");
 			}
 
 			
 
 			Transaction tx = session.beginTransaction(); // begin the transaction
 			tx.commit();
+			
+			
 			
 			RequestDispatcher rdObj=request.getRequestDispatcher("Welcome.jsp");
 			rdObj.include(request, response);

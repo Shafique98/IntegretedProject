@@ -1,6 +1,7 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.danishservlets;
 
 import java.io.IOException;
+
 import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
@@ -15,19 +16,19 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import com.velociter.hibernate.componentmapping.onlineshopping.Shopping;
+import com.velociter.hibernate.componentmapping.onlinemarriage.MarriageRegistration;
 
 /**
- * Servlet implementation class OnlineShoppingServlet
+ * Servlet implementation class MarriageRegistrationServlet
  */
-@WebServlet("/OnlineShoppingServlet")
-public class OnlineShoppingServlet extends HttpServlet {
+@WebServlet("/MarriageRegistrationServlet")
+public class MarriageRegistrationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public OnlineShoppingServlet() {
+	public MarriageRegistrationServlet() {   
 		super();
 		// TODO Auto-generated constructor stub
 	}
@@ -49,62 +50,63 @@ public class OnlineShoppingServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		response.setContentType("text/html"); // set the content of the page as text and html
+		response.setContentType("text/html");
 		PrintWriter writter = response.getWriter();
 
-		Shopping shop = new Shopping();
-		String productType = request.getParameter("productType");
-		shop.setProductType(productType);
+		MarriageRegistration marriage = new MarriageRegistration();
 
-		String productName = request.getParameter("productName");
-		shop.setProductName(productName);
-
-		String productBrand = request.getParameter("productBrand");
-		shop.setProductBrand(productBrand);
-
-		String productColour = request.getParameter("productColour");
-		shop.setProductColour(productColour);
-
-		String productWeight = request.getParameter("productWeight");
-		shop.setProductWeight(productWeight);
-
-		System.out.println(productColour +" "+productWeight);
-		
-		float productPrice = Float.parseFloat(request.getParameter("productPrice"));
-		shop.setProductPrice(productPrice);
-
-		String productWarranty = request.getParameter("productWarranty");
-		shop.setProductWarranty(productWarranty);
-
-/*		String firstName = request.getParameter("firstName");
-		shop.getCustomer().setFirstName(firstName);
-
+		String firstName = request.getParameter("firstName");
 		String lastName = request.getParameter("lastName");
-		shop.getCustomer().setLastName(lastName);
-
+		String motherName = request.getParameter("motherName");
+		String religion = request.getParameter("religion");
+		String fatherName = request.getParameter("fatherName");
+		String cast = request.getParameter("cast");
 		String mobileNo = request.getParameter("mobileNo");
-		shop.getCustomer().setMobileNo(mobileNo);
-
 		String email = request.getParameter("email");
-		shop.getCustomer().setEmail(email);
+		String job = request.getParameter("job");
+		float salary = Float.parseFloat(request.getParameter("salary"))  ;
+		String dob = request.getParameter("dob");
+		String gender = request.getParameter("gender");
+		String weight = request.getParameter("weight");
+		String height = request.getParameter("height");
+		
+		
+		
+
+		String collegeStudied = request.getParameter("collegeStudied");
+		String qualification = request.getParameter("qualification"); 
 
 		String houseNo = request.getParameter("houseNo");
-		shop.getCustomer().getAddress().setHouseNo(houseNo);
-
 		String streetName = request.getParameter("streetName");
-		shop.getCustomer().getAddress().setStreetName(streetName);
-
 		String areaName = request.getParameter("areaName");
-		shop.getCustomer().getAddress().setAreaName(areaName);
-
 		String city = request.getParameter("city");
-		shop.getCustomer().getAddress().setCity(city);
-
 		String country = request.getParameter("country");
-		shop.getCustomer().getAddress().setCountry(country);
-
 		int pinCode = Integer.parseInt(request.getParameter("pinCode"));
-		shop.getCustomer().getAddress().setPinCode(pinCode);               */
+
+		marriage.setFirstName(firstName);
+		marriage.setLastName(lastName);
+		marriage.setMotherName(motherName);
+		marriage.setFatherName(fatherName);
+		marriage.setReligion(religion);
+		marriage.setCast(cast);
+		marriage.setMobileNo(mobileNo);
+		marriage.setEmail(email);
+		marriage.setJob(job);
+		marriage.setSalary(salary);
+		marriage.setDob(dob);
+		marriage.setGender(gender);
+		marriage.setHeight(height);
+		marriage.setWeight(weight);
+
+		marriage.getQualification().setCollegeStudied(collegeStudied);
+		marriage.getQualification().setQualification(qualification);  
+
+		marriage.getAddress().setHouseNo(houseNo);
+		marriage.getAddress().setStreetName(streetName);
+		marriage.getAddress().setAreaName(areaName);
+		marriage.getAddress().setCity(city);
+		marriage.getAddress().setCountry(country);
+		marriage.getAddress().setPinCode(pinCode);
 
 		Session session = null;
 
@@ -114,10 +116,12 @@ public class OnlineShoppingServlet extends HttpServlet {
 			System.out.println("under try");
 			session = sessionF.openSession();
 
-			session.save(shop);
+			session.save(marriage);
 
 			Transaction tran = session.beginTransaction();
 			tran.commit();
+			
+			writter.print("MarriageRegistration Details inserted successfully");
 			
 			RequestDispatcher rdObj=request.getRequestDispatcher("Welcome.jsp");
 			rdObj.include(request, response);

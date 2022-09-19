@@ -1,4 +1,4 @@
-package com.velociter.ems.servlets;
+package com.velociter.ems.danishservlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -70,6 +70,8 @@ public class CustomerRegistrationServlet extends HttpServlet {
 
 			Transaction tran = session.beginTransaction();
 			tran.commit();
+			
+			writter.print("CustomerRegistration Details inserted successfully");
 			
 			RequestDispatcher rdObj=request.getRequestDispatcher("Welcome.jsp");
 			rdObj.include(request, response);
