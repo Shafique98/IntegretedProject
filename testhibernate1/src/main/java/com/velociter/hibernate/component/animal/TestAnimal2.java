@@ -31,7 +31,7 @@ public class TestAnimal2 {
 				String breed = (String) row[1];
 				String type = (String) row[2];
 				int legs = (int) row[3];
-				System.out.println(names + "\t\t" + breed + "\t\t" + type + "\t\t" + (legs == 2 ? "Two" : "Four"));
+				System.out.println(names+"\t\t"+breed+"\t\t"+type+"\t\t"+(legs == 2 ?"Two" : "Four"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();

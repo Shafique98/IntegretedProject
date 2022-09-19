@@ -5,7 +5,8 @@
 	pageEncoding="UTF-8"%>
 <%
 Operation op = new Operation();
-ArrayList<String> list = op.getCountries();
+ArrayList<String> countryList = op.getCountries();
+ArrayList<Integer> managerList = op.getManagers();
 %>
 <!DOCTYPE html>
 <html>
@@ -63,7 +64,16 @@ input[type=number] {
 			</tr>
 			<tr>
 				<td>Reporting To :</td>
-				<td><input type="text" name="reportingTo"></td>
+				<td><select name="reportingTo" required>
+						<option value="">Select Country</option>
+						<%
+						for (int manager : managerList) {
+						%>
+						<option value="<%=manager %>"><%=manager %></option>
+						<%
+						}
+						%>
+				</select></td>
 			</tr>
 			<tr>
 				<td colspan="2" align=center>Address</td>
@@ -101,7 +111,7 @@ input[type=number] {
 							<td><select name="country" required>
 									<option value="">Select Country</option>
 									<%
-									for (String showCountry : list) {
+									for (String showCountry : countryList) {
 									%>
 									<option value="<%=showCountry%>"><%=showCountry%></option>
 									<%

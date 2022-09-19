@@ -239,8 +239,35 @@ if (session.getAttribute("empId") == null) {
 	}
 	%>
 	<script type="text/javascript" src="../Panel.js"></script>
-	<table style="width: 100%; text-align: center;background-color: gray;">
+	<table style="width: 100%; text-align: left; background-color: gray;">
+		<tr style="width :10%">
+			<td><a href="OnlineShopping.jsp">Online Shopping</a></td>
+			<td><a href="SongDetails.jsp">Song PlayList</a></td>
+			<td><a href="MobileRecharge.jsp">MobileRecharge</a></td>
+		</tr>
+		<tr style="width: 35%">
+			<td><a href="SocialMedia.jsp">Social Media</a></td>
+			<td><a href="AnimalDetails.jsp">Animal Details</a></td>
+			<td><a href="Dress.jsp">Dress Order</a></td>
+		</tr>
+		<tr style="width: 35%">
+			<td><a href="OnlineMarriageRegistration.jsp">Online Marriage Registration</a></td>
+			<td><a href="Order.jsp">Online Order</a></td>
+			<td><a href="Electronic.jsp">Electronic Product</a></td>
+		</tr>
 		<tr>
+			<td><a href="OnlineFlightBooking.jsp">Online Flight Booking</a></td>
+			<td><a href="Dish.jsp">Food Factory</a></td>
+			<td><a href="MovieTicket.jsp">Movie Ticket</a></td>
+		</tr>
+		<tr>
+			<td><a href="CustomerRegistration.jsp">Customer Registration</a></td>
+			<td><a href="TrainingCenter.jsp">Training Center</a></td>
+			<td><a href="Student.jsp">Student </a></td>
+		</tr>
+	</table>
+<!--	<table style="width: 100%; text-align: center; background-color: gray;">
+ 		<tr>
 			<td><a href="OnlineShopping.jsp">Online Shopping</a></td>
 			<td><a href="SocialMedia.jsp">Social Media</a></td>
 			<td><a href="OnlineMarriageRegistration.jsp">Online Marriage
@@ -260,8 +287,8 @@ if (session.getAttribute("empId") == null) {
 			<td><a href="Electronic.jsp">Electronic Product</a></td>
 			<td><a href="MovieTicket.jsp">Movie Ticket</a></td>
 			<td><a href="Student.jsp">Student </a></td>
-		</tr>
-	</table>
+		</tr> 
+	</table>-->
 </body>
 </html>
 <%

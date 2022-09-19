@@ -98,6 +98,15 @@
 	</servlet-mapping>
 
 	<servlet>
+		<servlet-name>ReportingEmpServlet1</servlet-name>
+		<servlet-class>com.velociter.ems.servlets.ReportingEmpServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReportingEmpServlet1</servlet-name>
+		<url-pattern>/jsp/ReloadReportingList</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
 		<servlet-name>OnlineShopping</servlet-name>
 		<servlet-class>com.velociter.ems.servlets.OnlineShoppingServlet</servlet-class>
 	</servlet>
@@ -144,7 +153,7 @@
 
 	<servlet>
 		<servlet-name>SongServlet</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.SongDetailsServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shafeequeservlets.SongDetailsServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>SongServlet</servlet-name>
@@ -153,7 +162,7 @@
 
 	<servlet>
 		<servlet-name>Animal</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.AnimalRegistrationServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shafeequeservlets.AnimalRegistrationServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Animal</servlet-name>
@@ -162,7 +171,7 @@
 
 	<servlet>
 		<servlet-name>Food</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.DishServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shafeequeservlets.DishServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Food</servlet-name>
@@ -171,7 +180,7 @@
 
 	<servlet>
 		<servlet-name>Order</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.OrderServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shafeequeservlets.OrderServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Order</servlet-name>
@@ -180,7 +189,7 @@
 
 	<servlet>
 		<servlet-name>Training</servlet-name>
-		<servlet-class>com.velociter.ems.servlets.TrainingServlet</servlet-class>
+		<servlet-class>com.velociter.ems.shafeequeservlets.TrainingServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Training</servlet-name>

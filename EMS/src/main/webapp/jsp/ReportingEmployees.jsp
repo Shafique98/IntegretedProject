@@ -5,6 +5,8 @@
 if (session.getAttribute("empId") == null) {
 	response.sendRedirect("Login.jsp");
 } else {
+	RequestDispatcher rd = request.getRequestDispatcher("ReloadReportingList");
+	rd.include(request, response);
 %>
 <!DOCTYPE html>
 <html>
@@ -53,7 +55,6 @@ if (session.getAttribute("empId") == null) {
 		}
 		}
 		%>
-
 	</table>
 	<a href="Welcome.jsp">Welcome page</a>
 </body>
